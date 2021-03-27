@@ -13,6 +13,8 @@ public class MainPage {
 
     @FindBy(css = "h2.crayons-story__title > a")
     public WebElement firstBlog;
+    @FindBy(linkText = "Podcasts")
+    public WebElement podcastsBtn;
 
     public MainPage(WebDriver driver){
         this.driver = driver;
@@ -22,6 +24,10 @@ public class MainPage {
 
     public void selectFirstBlog(){
         firstBlog.click();
+    }
+
+    public void goToPodcastSection(){
+        podcastsBtn.click();
     }
 
 }
